@@ -1,0 +1,27 @@
+# ======================== Elasticsearch Configuration =========================
+
+# ---------------------------------- Cluster -----------------------------------
+cluster.name: elasticsearch
+
+# ------------------------------------ Node ------------------------------------
+node.name: Shobhits-MacBook-Pro.local
+
+# ----------------------------------- Paths ------------------------------------
+# You can configure these paths in Docker Compose, so no need to define here.
+
+# ----------------------------------- Memory -----------------------------------
+bootstrap.memory_lock: true
+
+# ---------------------------------- Network -----------------------------------
+http.host: 0.0.0.0
+# No need for transport.host if using single-node
+
+# --------------------------------- Discovery ----------------------------------
+
+# ---------------------------------- Various -----------------------------------
+action.destructive_requires_name: false
+
+# ----------------------- BEGIN SECURITY AUTO CONFIGURATION -------------------
+xpack.security.enabled: false
+# Removing SSL settings since security is disabled
+# ----------------------- END SECURITY AUTO CONFIGURATION ---------------------
