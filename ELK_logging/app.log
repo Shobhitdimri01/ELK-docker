@@ -1,0 +1,47 @@
+{"time":"2024-08-28T20:44:46.9864+05:30","level":"DEBUG","msg":"Debug code"}
+{"time":"2024-08-28T20:44:46.99048+05:30","level":"INFO","msg":"hello","user":{"id":51045581}}
+{"time":"2024-08-28T20:44:46.990684+05:30","level":"ERROR","msg":"error occured","user":{"id":51045581}}
+{"time":"2024-08-28T20:44:57.428133+05:30","level":"DEBUG","msg":"Debug code"}
+{"time":"2024-08-28T20:44:57.434159+05:30","level":"INFO","msg":"hello","user":{"id":37902791}}
+{"time":"2024-08-28T20:44:57.434372+05:30","level":"ERROR","msg":"error occured","user":{"id":37902791}}
+{"time":"2024-08-28T20:47:12.890236+05:30","level":"DEBUG","msg":"Debug code"}
+{"time":"2024-08-28T20:47:12.893177+05:30","level":"INFO","msg":"hello","user":{"id":34124942}}
+{"time":"2024-08-28T20:47:12.893386+05:30","level":"ERROR","msg":"error occured","user":{"id":34124942}}
+
+
+
+input {
+  file {
+    path => "/Users/shobhitdimri/ELK_logging/app.log"
+  }
+}
+
+output {
+  elasticsearch {
+    hosts => ["http://localhost:9200"]
+    index => "logstash-%{+YYYY.MM.dd}"
+  }
+
+  # Example: Also output to standard output for debugging
+  stdout {
+    codec => rubydebug
+  }
+}
+{"time":"2024-08-29T10:31:22.561561+05:30","level":"DEBUG","msg":"Debug code"}
+{"time":"2024-08-29T10:31:22.568016+05:30","level":"INFO","msg":"hello","user":{"id":56391696}}
+{"time":"2024-08-29T10:31:22.568216+05:30","level":"ERROR","msg":"error occured","user":{"id":56391696}}
+{"time":"2024-08-29T13:51:39.462421+05:30","level":"DEBUG","msg":"Debug code"}
+{"time":"2024-08-29T13:51:39.467349+05:30","level":"INFO","msg":"hello","user":{"id":51827157}}
+{"time":"2024-08-29T13:51:39.467557+05:30","level":"ERROR","msg":"error occured","user":{"id":51827157}}
+{"time":"2024-08-29T14:00:58.994991+05:30","level":"DEBUG","msg":"Debug code"}
+{"time":"2024-08-29T14:00:58.999644+05:30","level":"INFO","msg":"hello","user":{"id":19243559}}
+{"time":"2024-08-29T14:00:58.999841+05:30","level":"ERROR","msg":"error occured","user":{"id":19243559}}
+{"time":"2024-08-30T01:33:16.720902+05:30","level":"DEBUG","msg":"Debug code"}
+{"time":"2024-08-30T01:33:16.725129+05:30","level":"INFO","msg":"hello","user":{"id":8802536}}
+{"time":"2024-08-30T01:33:16.725329+05:30","level":"ERROR","msg":"error occured","user":{"id":8802536}}
+{"time":"2024-08-30T01:33:32.621427+05:30","level":"DEBUG","msg":"Debug code"}
+{"time":"2024-08-30T01:33:32.625588+05:30","level":"INFO","msg":"hello","user":{"id":20960237}}
+{"time":"2024-08-30T01:33:32.62579+05:30","level":"ERROR","msg":"error occured","user":{"id":20960237}}
+{"time":"2024-08-30T01:33:42.063354+05:30","level":"DEBUG","msg":"Debug code"}
+{"time":"2024-08-30T01:33:42.067492+05:30","level":"INFO","msg":"hello","user":{"id":9587474}}
+{"time":"2024-08-30T01:33:42.067697+05:30","level":"ERROR","msg":"error occured","user":{"id":9587474}}
